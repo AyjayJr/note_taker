@@ -6,7 +6,7 @@
 
 <h2> About the project </h2>
 
-<p>A note taking web application inspired by the zettlekasten metho</p>
+<p>A note taking web application inspired by the zettlekasten method</p>
 
 <h3>TODO:</h3>
 <ul>
