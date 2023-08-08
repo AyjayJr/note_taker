@@ -4,7 +4,7 @@ const MarkdownEditor = ({ content, handleChange }) => {
 	return (
 		<div>
 			<textarea
-				className="w-full p-2 border rounded"
+				className='w-full p-2 border rounded bg-accent'
 				value={content}
 				onChange={handleChange}
 				rows={10}
