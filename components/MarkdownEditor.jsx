@@ -1,4 +1,5 @@
 import ReactMarkdown from "react-markdown"
+import remarkBreaks from 'remark-breaks'
 
 const MarkdownEditor = ({ content, handleChange }) => {
 	return (
@@ -10,7 +11,10 @@ const MarkdownEditor = ({ content, handleChange }) => {
 				rows={10}
 			/>
 			<div className="flex-1 w-1/2 p-3 border border-black rounded">
-				<ReactMarkdown className='prose prose-invert'>
+				<ReactMarkdown
+					className='prose prose-invert'
+					remarkPlugins={[remarkBreaks]}
+				>
 					{content}
 				</ReactMarkdown>
 			</div>
