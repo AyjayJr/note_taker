@@ -2,14 +2,18 @@ import ReactMarkdown from "react-markdown"
 
 const MarkdownEditor = ({ content, handleChange }) => {
 	return (
-		<div>
+		<div className='flex flex-row gap-10'>
 			<textarea
-				className='w-full p-2 border rounded bg-accent'
+				className='flex-1 w-1/2 p-2 border rounded bg-accent'
 				value={content}
 				onChange={handleChange}
 				rows={10}
 			/>
-			<ReactMarkdown>{content}</ReactMarkdown>
+			<div className="flex-1 w-1/2 p-3 border border-black rounded">
+				<ReactMarkdown className='prose prose-invert'>
+					{content}
+				</ReactMarkdown>
+			</div>
 		</div>
 	)
 }
