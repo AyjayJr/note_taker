@@ -1,5 +1,7 @@
 import ReactMarkdown from "react-markdown"
 import remarkBreaks from 'remark-breaks'
+import rehypeHighlight from 'rehype-highlight'
+import remarkGfm from 'remark-gfm'
 
 const MarkdownEditor = ({ content, handleChange }) => {
 	return (
@@ -12,7 +14,7 @@ const MarkdownEditor = ({ content, handleChange }) => {
 			<div className="flex-1 w-1/2 p-3 border border-black rounded">
 				<ReactMarkdown
 					className='prose prose-invert'
-					remarkPlugins={[remarkBreaks]}
+					remarkPlugins={[remarkBreaks, rehypeHighlight, remarkGfm]}
 				>
 					{content}
 				</ReactMarkdown>
