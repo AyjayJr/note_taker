@@ -17,9 +17,9 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className='h-screen'>
       <Nav />
-      <main className="flex w-full">
+      <main className="flex h-[90%] w-full">
         <Sidebar />
         <div className='ml-48 mt-16 flex-1 mr-12'>
           <MarkdownEditor
