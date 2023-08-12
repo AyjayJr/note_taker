@@ -10,6 +10,8 @@ import remarkGfm from 'remark-gfm'
 const MarkdownEditor = ({ content, handleChange }) => {
   const [preview, setPreview] = useState(false);
 
+  const saveNoteHandler = () => {}
+
   const previewHandler = () => {
     setPreview((prev) => !prev);
   }
