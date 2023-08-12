@@ -3,21 +3,10 @@
 import { useState } from 'react'
 
 const Sidebar = () => {
-	const [sidebarOpen, setSidebarOpen] = useState(true);
-
-	const toggleSidebar = () => {
-		setSidebarOpen((prev) => ( !prev ));
-	}
-
 	return (
-		<aside
-			className={ `${sidebarOpen ? 'w-16' : 'w-48'} flex-1 h-full bg-secondary overflow-hidden fixed top-12 left-0 transition-all duration-300`}
-		>
-			<button
-				className='p-2 text-white hover:text-gray-400 transition-colors'
-				onClick={toggleSidebar}
-			>
-				Toggle 
+		<aside className='w-48 h-full bg-secondary overflow-hidden fixed top-12 left-0'>
+			<button className='p-2 text-white hover:text-gray-400 transition-colors'>
+			  Search	
 			</button>
 			{/* content  */}
 		</aside>

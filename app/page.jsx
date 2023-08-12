@@ -19,8 +19,8 @@ export default function Home() {
   return (
     <div className='h-screen'>
       <Nav />
+      <Sidebar />
       <main className="flex h-[90%] w-full">
-        <Sidebar />
         <div className='ml-48 mt-16 flex-1 mr-12'>
           <MarkdownEditor
             content={currentNote.content}
