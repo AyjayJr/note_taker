@@ -17,11 +17,15 @@ const MarkdownEditor = ({ content, handleChange }) => {
 	return (
 		<div className='flex h-full items-end justify-center flex-row'>
 			<textarea
-        className={`${preview ? 'hidden' : ''} flex-1 max-w-[50%] h-full p-3 border rounded bg-accent resize-none`}
+        className={`${preview ? 'hidden' : ''}
+        flex-1 max-w-[50%] h-full p-3 border rounded bg-accent resize-none`}
 				value={content}
 				onChange={handleChange}
 			/>
-      <div className={`${preview ? '' : 'hidden'} flex-1 max-w-[50%] h-full p-3 border border-black rounded`}>
+      <div
+        className={`${preview ? '' : 'hidden'}
+        flex-1 max-w-[50%] h-full p-3 border border-black  bg-secondary rounded`}
+      >
 				<ReactMarkdown
 					className='min-w-full prose prose-invert'
 					remarkPlugins={[remarkBreaks, rehypeHighlight, remarkGfm]}
@@ -33,6 +37,7 @@ const MarkdownEditor = ({ content, handleChange }) => {
         <button
           className='border border-white rounded p-1 bg-secondary 
           hover:text-gray-400 transition-colors'
+          onClick={saveNoteHandler}
         >
           Save
         </button>
