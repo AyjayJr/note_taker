@@ -1,5 +1,6 @@
 'use client'
 
+import NoteList from '@/components/NoteList'
 import { useState } from 'react'
 
 const Sidebar = () => {
@@ -8,7 +9,7 @@ const Sidebar = () => {
 			<button className='p-2 text-white hover:text-gray-400 transition-colors'>
 			  Search	
 			</button>
-			{/* content  */}
+      <NoteList />
 		</aside>
 	)
 }
