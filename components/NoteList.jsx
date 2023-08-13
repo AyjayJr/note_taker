@@ -2,7 +2,7 @@ import React from 'react'
 
 const Note = ({ note }) => {
   return (
-    <div className="border min-w-content  p-2 m-2 border-gray-400 rounded">
+    <div className="border whitespace-nowrap overflow-hidden p-2 m-2 border-gray-400 rounded">
       {note.content}
     </div>
   )
