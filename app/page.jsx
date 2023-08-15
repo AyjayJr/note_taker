@@ -7,8 +7,8 @@ import MainContent from "@/components/MainContent"
 import MarkdownEditor from "@/components/MarkdownEditor"
 
 export default function Home() {
-  const [currentNote, setCurrentNote] = useState({ id: null, content: ''});
   const [notes, setNotes] = useState([]);
+  const [currentNote, setCurrentNote] = useState({ id: null, content: ''});
 
   const handleNoteChange = (e) => {
     setCurrentNote({
